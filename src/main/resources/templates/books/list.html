@@ -14,12 +14,6 @@
 </table>
 <input type="submit" value="作成" />
 </form>
-<hr /> 次ページに続く
-登録時の遷移先パスを
-「/books/create」
-IDはシステム側で発行
-(ID用テキストボックス削除)
-５．課題８：RESTを用いたﾌﾟﾛｼﾞｪｸﾄ作成
 <table>
 <tr th:each="book : ${books}">
 <td th:text="${book.id}">100</td>
