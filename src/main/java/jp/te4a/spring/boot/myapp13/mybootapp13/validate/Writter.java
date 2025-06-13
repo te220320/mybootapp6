@@ -1,4 +1,4 @@
-package jp.te4a.spring.boot.myapp13.mybootapp13;
+package jp.te4a.spring.boot.myapp13.mybootapp13.validate;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -15,8 +15,10 @@ import jakarta.validation.Payload;
 @Constraint(validatedBy = WritterValidator.class)
 public @interface Writter {
     String message() default "Input ${validaterdValue}";
+
     // エラーメッセージ、${validatedValue}で入力値を埋め込み
     Class<?>[] groups() default {};
+
     Class<? extends Payload>[] payload() default {};
 
     String ok();// 合格値を受け取るパラメータ
